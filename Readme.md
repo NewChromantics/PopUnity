@@ -1,7 +1,9 @@
 Pop Unity Code/Package
 ==========================
 
-This repository intends to be a replacement for the aging & disorganised collection of code https://github.com/SoylentGraham/PopUnityCommon
+This repository intends to be a replacement for the aging & disorganised collection of code of various repositories including;
+ - https://github.com/SoylentGraham/PopUnityCommon
+ - https://github.com/NewChromantics/PopCodecs 
 
 But more importantly, common code for PopH264, PopYuv, PopCameraDevice, and more plugins.
 
