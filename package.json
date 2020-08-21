@@ -1,0 +1,9 @@
+﻿{
+    "name": "com.newchromantics.popunity",
+    "description": "Unity utility scripts, all under Pop. namespace.",
+    "version": "0.0.1",
+    "unity": "2017.0",
+    "displayName": "Pop Unity Common Code",
+    "dependencies": {
+    }
+}
