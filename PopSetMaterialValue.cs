@@ -211,7 +211,7 @@ public class PopSetMaterialValue : MonoBehaviour
 
 
 
-	void ForEachMaterial(System.Action<Material> Lambda)
+	public void ForEachMaterial(System.Action<Material> Lambda)
 	{
 		//	todo; merge all this. Cache an array of materials, and set all children to the same material (option!)
 		//	todo: make this an option, and cache a list of materials
