@@ -13,3 +13,12 @@ Trying to get this distributed as a package, but for now, could be included as a
 Pop.PixelFormat
 -------------------
 This is an enum matching the names of various pixel formats that come out of Pop plugins.
+
+PopSubArray
+-------------------
+This implements a `SubArray()` function to arrays, that allows you to easily copy a section of an array into a new one
+`
+using Pop;	//	required as code is in a namespace to avoid conflicts
+byte[] MyBigArray;
+var SmallArray = MyBigArray.SubArray( MyBigArray.length/2 );
+`
