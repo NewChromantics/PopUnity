@@ -1,5 +1,5 @@
 {
-    "name": "Author.PackageName.Runtime",
+    "name": "com.newchromantics.popunity.Runtime",
     "references": [],
     "includePlatforms": [
         "Android",
