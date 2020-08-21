@@ -6,7 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Pop;
 
 #if USE_MEMORY_MAPPED_FILE
 //	.net4 required
@@ -120,11 +120,14 @@ public class PopStreamFileReader : MonoBehaviour
 		System.Func<long, long, byte[]> ReadFileBytes = (long Position, long Size) =>
 		{
 			var Data = new byte[Size];
+			//	gr: this will succeed, even if passed EOF
 			var NewPos = File.Seek(Position, System.IO.SeekOrigin.Begin);
 			if (NewPos != Position)
 				throw new System.Exception("Seeked to " + Position + " but stream is at " + NewPos);
 			var BytesRead = File.Read(Data, 0, (int)Size);
-			//if (BytesRead != Size)
+			//	probably EOF, but no errors
+			if (BytesRead != Size)
+				return Data.SubArray(0, BytesRead);
 			//	throw new System.Exception("FileStream only read " + BytesRead + "/" + Size + " bytes");
 			return Data;
 		};
