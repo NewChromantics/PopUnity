@@ -24,8 +24,9 @@ public class PopStreamFileReader : MonoBehaviour
 {
 	public string Filename;
 	public Pop.UnityEvent_FileChunk OnFileChunkRead;
-	[Range(0,1024*1024)]
-	public int ReadKbSec = 1024;
+	[Range(0,50)]
+	public int ReadMbSec = 5;
+	public int ReadKbSec { get { return ReadMbSec * 1024; } }
 	public int ReadBytesSec { get { return ReadKbSec * 1024; } }
 	public int ReadBytesFrame { get { return ReadBytesSec / 60; } }	//	yeah, I know, not always 60fps...
 
